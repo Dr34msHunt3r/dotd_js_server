@@ -1,0 +1,92 @@
+{
+  "recipes": [
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "Mom's spaghetti",
+      "recipe": "Very very very long really very long description how to cook a spaghetti boloneys! :)",
+      "id": 1
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "My Hello World!",
+      "recipe": "Hello :)",
+      "id": 2
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "whatever's I can see you",
+      "recipe": "GM I am so glad you are doing well ❤️",
+      "id": 3
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "Chicken Soup",
+      "recipe": "Boil chicken and vegetables in very hot water.",
+      "id": 4
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "thanks for the invite 😊",
+      "recipe": "jjj jjj you are so cute",
+      "id": 5
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "erteterte rte to know if we can go out",
+      "recipe": "ertetertertete",
+      "id": 6
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "Spaghetti Carbonara",
+      "recipe": "My favourite spaghetti 🍝😍",
+      "id": 7
+    },
+    {
+      "favourite": "false",
+      "imageUrl": "assets/default/recipe_default_image.png",
+      "title": "auuu",
+      "recipe": "szalalalala la",
+      "id": 8
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "recipeId": "1",
+      "name": "0.5kg pasta"
+    },
+    {
+      "id": 2,
+      "recipeId": "1",
+      "name": "lots of water"
+    },
+    {
+      "id": 5,
+      "recipeId": "7",
+      "name": "some pasta"
+    },
+    {
+      "id": 6,
+      "recipeId": "7",
+      "name": "bacon"
+    },
+    {
+      "id": 3,
+      "recipeId": "7",
+      "name": "red onion!"
+    },
+    {
+      "id": 4,
+      "recipeId": "7",
+      "name": "lots of water also"
+    }
+  ]
+}
