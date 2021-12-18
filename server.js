@@ -15,22 +15,22 @@ server.use(jsonServer.bodyParser)
 //RECIPES
 //NOTE: recipe collection works only for POSTMAN
 server.post('/recipes/addcollection',(req,res) => {
-    req.body.map((item) => {recipes.push({id:uuid.v4(),favourite:item.favourite,imageUrl:item.imageUrl,title:item.title,recipe:item.recipe})})
+    req.body.map((item) => {recipes.push({id:uuid.v4(),favourite:item.favourite,imageUrl:item.imageUrl,recipeTitle:item.recipeTitle,recipeRecipe:item.recipeRecipe})})
     res.send({recipes}) 
 })
 server.post('/recipes/add',(req,res) => {
-    recipes.push({id:uuid.v4(),favourite:req.body.favourite,imageUrl:req.body.imageUrl,title:req.body.title,recipe:req.body.recipe})
+    console.log("cokolwiek")
+    recipes.push({id:uuid.v4(),favourite:(JSON.parse(req.body.recipe)).favourite,imageUrl:(JSON.parse(req.body.recipe)).imageUrl,recipeTitle:(JSON.parse(req.body.recipe)).recipeTitle,recipeRecipe:(JSON.parse(req.body.recipe)).recipeRecipe,ingredients:(JSON.parse(req.body.recipe)).ingredients})
+    console.log(recipes[recipes.length-1])
     res.send(recipes[recipes.length-1]) 
 })
 server.get('/recipes/get',(req,res) => {
     res.send(recipes.map((item) => item))
 })
 server.delete('/recipes/delete:id',(req,res) => {
-    var counter = recipes.length
-    for(var i=0; i < counter; i++){
+    for(var i=0; i < recipes.length; i++){
         if(req.body.id == recipes[i].id){
             recipes.splice(i,1)
-            counter--
             i--
         }
     }
@@ -38,8 +38,8 @@ server.delete('/recipes/delete:id',(req,res) => {
 })
 server.put('/recipes/put:id',(req,res) => {
     for(var i=0; i < recipes.length; i++){
-        if(req.body.id == recipes[i].id){
-            recipes[i] = {id:req.body.id,favourite:req.body.favourite,imageUrl:req.body.imageUrl,title:req.body.title,recipe:req.body.recipe}
+        if((JSON.parse(req.body.recipe)).id == recipes[i].id){
+            recipes[i] = {id:(JSON.parse(req.body.recipe)).id,favourite:(JSON.parse(req.body.recipe)).favourite,imageUrl:(JSON.parse(req.body.recipe)).imageUrl,recipeTitle:(JSON.parse(req.body.recipe)).recipeTitle,recipeRecipe:(JSON.parse(req.body.recipe)).recipeRecipe,ingredients:(JSON.parse(req.body.recipe)).ingredients}
         }
     }
     res.send(true)
