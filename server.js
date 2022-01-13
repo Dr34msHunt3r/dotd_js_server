@@ -19,9 +19,7 @@ server.post('/recipes/addcollection',(req,res) => {
     res.send({recipes}) 
 })
 server.post('/recipes/add',(req,res) => {
-    console.log("cokolwiek")
     recipes.push({id:uuid.v4(),favourite:(JSON.parse(req.body.recipe)).favourite,imageUrl:(JSON.parse(req.body.recipe)).imageUrl,recipeTitle:(JSON.parse(req.body.recipe)).recipeTitle,recipeRecipe:(JSON.parse(req.body.recipe)).recipeRecipe,ingredients:(JSON.parse(req.body.recipe)).ingredients})
-    console.log(recipes[recipes.length-1])
     res.send(recipes[recipes.length-1]) 
 })
 server.get('/recipes/get',(req,res) => {
